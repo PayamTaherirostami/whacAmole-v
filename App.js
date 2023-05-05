@@ -47,5 +47,5 @@ function start() {
      result = 0
      score.textContent = result
      currentTime = 60
-     randomSquare()
+     moveMole()
 }
