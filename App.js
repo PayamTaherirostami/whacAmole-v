@@ -6,6 +6,28 @@ const score = document.querySelector('#score')
 let result = 0
 let currentTime = 60
 let myChoice
+
+const val = document.querySelector('#title')
+
+let num = 1050
+
+function start() {
+
+    result = 0
+    score.textContent = result
+    currentTime = 60
+
+    if (val.value == "Easy"){
+        num = 1050
+    }
+    if (val.value == "Medium"){
+        num = 950
+    }
+    if (val.value == "Difficult"){
+        num = 600
+    }
+    moveMole()
+}
 function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('mole')
@@ -13,6 +35,7 @@ function randomSquare() {
     let randomSquare = squares[Math.floor(Math.random()*9)]
     randomSquare.classList.add('mole')
     myChoice = randomSquare.id
+    
 }
 
 squares.forEach(square => {
@@ -25,10 +48,14 @@ squares.forEach(square => {
     })
 })
 
+
 function moveMole() {
-    // let timeId = null
-    timeId = setInterval(randomSquare,500)
+
+      // let timeId = null
+    timeId = setInterval(randomSquare, num)
+  
 }
+
 moveMole()
 function countDown(){
     currentTime--
@@ -43,9 +70,3 @@ function countDown(){
 
 let countDownTimerId = setInterval(countDown,1000)
 
-function start() {
-     result = 0
-     score.textContent = result
-     currentTime = 60
-     moveMole()
-}

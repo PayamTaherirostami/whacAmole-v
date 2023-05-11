@@ -1,14 +1,14 @@
 .grid{
-    width: 606px;
-    height: 606px;
+    width: 456px;
+    height: 456px;
     /* make them to be next each other */
     display: flex;
     /* make them to wrap the div */
     flex-wrap: wrap;
 }
 .square{
-    height: 200px;
-    width:  200px;
+    height: 150px;
+    width:  150px;
     border: solid black 1px;
     background-color: brown;
 }
@@ -27,12 +27,17 @@ body{
 body h2{
     color: brown;
 }
+select{
+    margin-left: 185px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 body h3{
     color: blue;
 }
 body h1{
     color: red;
-    margin-left: 220px;
+    margin-left: 150px;
 }
 button{
     background-color: blue;
